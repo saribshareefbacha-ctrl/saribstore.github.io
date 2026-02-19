@@ -1,0 +1,2515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>M.Sarib Randhawa · Senior Digital Specialist</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #f7f9fe;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: #121826;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+            transition: background-color 0.3s ease, color 0.2s ease;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+        /* ----- DARK MODE ----- */
+        body.dark-mode {
+            background-color: #0a0e1a;
+            color: #f0f4fa;
+        }
+
+        body.dark-mode .navbar,
+        body.dark-mode .exp-card,
+        body.dark-mode .skills-category,
+        body.dark-mode .contact-card,
+        body.dark-mode .profile-summary,
+        body.dark-mode .avatar-box,
+        body.dark-mode .contact-item,
+        body.dark-mode .contact-location,
+        body.dark-mode .badge,
+        body.dark-mode .hero-exp,
+        body.dark-mode .dropdown-menu,
+        body.dark-mode .modal-content,
+        body.dark-mode .user-welcome,
+        body.dark-mode .owner-welcome,
+        body.dark-mode .auth-menu,
+        body.dark-mode .category-grid {
+            background-color: #151e2f;
+            border-color: #2d3a52;
+            color: #f0f4fa;
+        }
+
+        body.dark-mode .hero-desc,
+        body.dark-mode .section-header p,
+        body.dark-mode .exp-desc,
+        body.dark-mode .skills-category li,
+        body.dark-mode .footer-bottom,
+        body.dark-mode .contact-item,
+        body.dark-mode .contact-location,
+        body.dark-mode .badge,
+        body.dark-mode .hero-exp,
+        body.dark-mode .small-note {
+            color: #d1d9e8;
+        }
+
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode .section-header h2,
+        body.dark-mode .exp-title h3,
+        body.dark-mode .skills-category h3,
+        body.dark-mode .contact-card h2,
+        body.dark-mode .modal-content h3,
+        body.dark-mode .login-box h3 {
+            color: #ffffff;
+        }
+
+        body.dark-mode .exp-title .sub,
+        body.dark-mode .badge,
+        body.dark-mode .hero-exp {
+            color: #b3c7ff;
+            background-color: #1f2b3f;
+        }
+
+        body.dark-mode .btn-outline {
+            border-color: #7f9cf5;
+            color: #e0e7ff;
+        }
+        body.dark-mode .btn-outline:hover {
+            background: #4f46e5;
+            color: white;
+        }
+
+        body.dark-mode .btn-secondary {
+            border-color: #4a5a7a;
+            color: #f0f4fa;
+        }
+        body.dark-mode .btn-secondary:hover {
+            background: #2d3a52;
+            border-color: #7f9cf5;
+            color: #ffffff;
+        }
+
+        body.dark-mode .nav-links a {
+            color: #d1d9e8;
+        }
+        body.dark-mode .nav-links a:hover {
+            color: #a5b9ff;
+        }
+
+        body.dark-mode .logo {
+            background: linear-gradient(145deg, #b1c3ff, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body.dark-mode .dots-button,
+        body.dark-mode .menu-item i,
+        body.dark-mode .theme-toggle-btn i {
+            color: #a5b9ff;
+        }
+
+        body.dark-mode .menu-item,
+        body.dark-mode .theme-toggle-btn {
+            color: #f0f4fa;
+        }
+
+        body.dark-mode .menu-item:hover,
+        body.dark-mode .theme-toggle-btn:hover {
+            background: #253040;
+        }
+
+        body.dark-mode .sub-options span {
+            background: #1f2b3f;
+            color: #f0f4fa;
+            border: 1px solid #3a4a6a;
+        }
+        body.dark-mode .sub-options span:hover {
+            background: #2d3b5a;
+            color: #ffffff;
+        }
+
+        body.dark-mode input,
+        body.dark-mode textarea {
+            background-color: #1a2538;
+            border-color: #3a4a6a;
+            color: #f0f4fa;
+        }
+        body.dark-mode input:focus,
+        body.dark-mode textarea:focus {
+            border-color: #7f9cf5;
+        }
+        body.dark-mode input::placeholder,
+        body.dark-mode textarea::placeholder {
+            color: #7f8ea8;
+        }
+
+        body.dark-mode .checkbox-wrapper label {
+            color: #f0f4fa;
+        }
+
+        body.dark-mode .exp-card,
+        body.dark-mode .skills-category,
+        body.dark-mode .contact-card,
+        body.dark-mode .profile-summary {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .contact-item,
+        body.dark-mode .contact-location {
+            background-color: #1f2b3f;
+            color: #f0f4fa;
+        }
+
+        body.dark-mode .user-welcome,
+        body.dark-mode .owner-welcome {
+            background-color: #1f2b3f;
+            border-color: #7f9cf5;
+        }
+        body.dark-mode .user-welcome span,
+        body.dark-mode .owner-welcome span {
+            color: #ffffff;
+        }
+        body.dark-mode .logout-btn,
+        body.dark-mode .owner-logout-btn {
+            color: #f0f4fa;
+        }
+
+        body.dark-mode .footer-bottom {
+            border-top-color: #2d3a52;
+        }
+
+        body.dark-mode .social-links a {
+            color: #a5b9ff;
+        }
+        body.dark-mode .social-links a:hover {
+            color: #ffffff;
+        }
+
+        body.dark-mode .education-badge {
+            background-color: #1f2b3f;
+            color: #f0f4fa;
+            border-color: #3a4a6a;
+        }
+
+        body.dark-mode .modal-content .close-modal-btn {
+            background: transparent;
+            color: #d1d9e8;
+            border-color: #4a5a7a;
+        }
+        body.dark-mode .modal-content .close-modal-btn:hover {
+            background: #2d3a52;
+            color: #ffffff;
+        }
+
+        body.dark-mode .small-note {
+            color: #b0c0da;
+        }
+
+        body.dark-mode .file-input button {
+            background: #2d3a52 !important;
+            color: #ffffff !important;
+            border: 1px solid #7f9cf5;
+        }
+        body.dark-mode .file-input button:hover {
+            background: #3d4e70 !important;
+        }
+
+        body.dark-mode .category-card {
+            background-color: #1f2b3f;
+            border-color: #3a4a6a;
+        }
+        body.dark-mode .category-card:hover {
+            background-color: #2d3b5a;
+            border-color: #7f9cf5;
+        }
+
+        /* Capitalization */
+        h1, h2, h3, h4, p, span, a, li, div:not(.fa, .fas, .far, .fab, .menu-item i, .sub-options span) {
+            text-transform: capitalize;
+        }
+        .contact-item, .contact-location, .footer-bottom, .badge, .hero-exp, .exp-title .sub {
+            text-transform: none !important;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        /* Website content wrapper */
+        #websiteContent {
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Owner mode - hide website content */
+        body.owner-mode #websiteContent {
+            display: none;
+        }
+        
+        /* Show website content when viewing changes */
+        body.owner-mode.viewing-changes #websiteContent {
+            display: block;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(145deg, #002366, #2b3d8f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+        .nav-links {
+            display: none;
+            gap: 30px;
+        }
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+            color: #1f2937;
+            transition: color 0.2s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        .nav-links a:hover {
+            color: #1e3a8a;
+        }
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background: #1e3a8a;
+            transition: width 0.2s ease;
+        }
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        /* Get Started Button */
+        .btn-get-started {
+            background: #1e3a8a;
+            border: 2px solid #1e3a8a;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(30, 58, 138, 0.3);
+        }
+        .btn-get-started:hover {
+            background: #0f2660;
+            border-color: #0f2660;
+            transform: scale(1.02);
+            box-shadow: 0 8px 18px rgba(30, 58, 138, 0.4);
+        }
+
+        /* User Welcome */
+        .user-welcome {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #eef3ff;
+            padding: 6px 16px;
+            border-radius: 40px;
+            border: 2px solid #1e3a8a;
+        }
+        .user-welcome span {
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+        .logout-btn {
+            background: transparent;
+            border: none;
+            color: #1e3a8a;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+        .logout-btn:hover {
+            background: rgba(30, 58, 138, 0.1);
+            transform: scale(1.1);
+        }
+
+        /* Owner Welcome */
+        .owner-welcome {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #eef3ff;
+            padding: 6px 20px;
+            border-radius: 40px;
+            border: 2px solid #1e3a8a;
+        }
+        .owner-welcome span {
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+        .owner-logout-btn {
+            background: transparent;
+            border: none;
+            color: #1e3a8a;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+        .owner-logout-btn:hover {
+            background: rgba(30, 58, 138, 0.1);
+            transform: scale(1.1);
+        }
+
+        /* Auth dropdown */
+        .auth-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .auth-menu {
+            position: absolute;
+            right: 0;
+            top: 45px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            width: 180px;
+            padding: 10px;
+            z-index: 100;
+            display: none;
+            border: 1px solid #dee5f0;
+        }
+        .auth-menu.show {
+            display: block;
+        }
+        .auth-menu .menu-item {
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 15px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        /* WhatsApp button */
+        .whatsapp-btn {
+            background: #25D366;
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+            text-decoration: none;
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            background: #20b859;
+        }
+
+        /* Email button */
+        .email-btn {
+            background: #ea4335;
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 4px 10px rgba(234, 67, 53, 0.3);
+            text-decoration: none;
+        }
+        .email-btn:hover {
+            transform: scale(1.1);
+            background: #d33828;
+        }
+
+        /* Hire Me Button */
+        .btn-hire {
+            background: #1e3a8a;
+            border: 2px solid #1e3a8a;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 10px rgba(30, 58, 138, 0.3);
+        }
+        .btn-hire:hover {
+            background: #0f2660;
+            border-color: #0f2660;
+            transform: scale(1.02);
+            box-shadow: 0 8px 18px rgba(30, 58, 138, 0.4);
+        }
+
+        /* Three-dot menu */
+        .menu-dots {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .dots-button {
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            color: #1e3a8a;
+            cursor: pointer;
+            padding: 8px 10px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+            transform: rotate(90deg);
+        }
+        .dots-button:hover {
+            background: rgba(30, 58, 138, 0.1);
+        }
+        .dropdown-menu {
+            position: absolute;
+            right: 0;
+            top: 50px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            width: 280px;
+            padding: 16px 8px;
+            z-index: 1000;
+            display: none;
+            border: 1px solid #dee5f0;
+        }
+        .dropdown-menu.show {
+            display: block;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #1f2937;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+        .menu-item i {
+            width: 24px;
+            color: #1e3a8a;
+            font-size: 18px;
+        }
+        .menu-item:hover {
+            background: #eef3ff;
+        }
+        .sub-options {
+            margin-left: 40px;
+            margin-top: 4px;
+            margin-bottom: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .sub-options span {
+            padding: 8px 14px;
+            border-radius: 40px;
+            font-size: 14px;
+            background: #f1f6ff;
+            cursor: pointer;
+            transition: 0.1s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sub-options span:hover {
+            background: #dae4ff;
+        }
+        .hidden {
+            display: none;
+        }
+
+        /* Single theme toggle button */
+        .theme-toggle-btn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #1f2937;
+            cursor: pointer;
+            transition: 0.15s;
+            width: 100%;
+        }
+        .theme-toggle-btn i {
+            width: 24px;
+            color: #1e3a8a;
+            font-size: 18px;
+        }
+        .theme-toggle-btn:hover {
+            background: #eef3ff;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s;
+        }
+        .modal.show {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal-content {
+            background: white;
+            border-radius: 40px;
+            padding: 40px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        .modal-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+        }
+        .modal-content input, .modal-content textarea {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 40px;
+            font-size: 16px;
+            outline: none;
+        }
+        .modal-content input:focus, .modal-content textarea:focus {
+            border-color: #1e3a8a;
+        }
+        .modal-content .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+            justify-content: flex-start;
+        }
+        .modal-content .checkbox-wrapper input[type="checkbox"] {
+            width: auto;
+            margin-bottom: 0;
+            accent-color: #1e3a8a;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .modal-content .checkbox-wrapper label {
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .modal-content button {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .modal-content .close-modal-btn {
+            background: transparent;
+            color: #666;
+            border: 2px solid #ddd;
+        }
+        .small-note {
+            font-size: 14px;
+            color: #666;
+            margin-top: -5px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        /* Category Grid for Place Order */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .category-card {
+            background: #f1f5ff;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            padding: 20px 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .category-card i {
+            font-size: 32px;
+            color: #1e3a8a;
+        }
+        .category-card span {
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .category-card:hover {
+            border-color: #1e3a8a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.15);
+        }
+        .category-card.selected {
+            border-color: #1e3a8a;
+            background: #dae4ff;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+        }
+        body.dark-mode .category-card.selected {
+            background: #2d3b5a;
+        }
+        .order-id-box {
+            background: #eef3ff;
+            border-radius: 40px;
+            padding: 12px 20px;
+            margin: 15px 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 2px dashed #1e3a8a;
+        }
+        body.dark-mode .order-id-box {
+            background: #1f2b3f;
+        }
+
+        /* Admin Login Modal */
+        .admin-login-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s;
+        }
+        .admin-login-modal.show {
+            visibility: visible;
+            opacity: 1;
+        }
+        .login-box {
+            background: white;
+            border-radius: 40px;
+            padding: 40px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        .login-box h3 {
+            font-size: 28px;
+            margin-bottom: 24px;
+            color: #1e3a8a;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 18px 22px;
+            margin-bottom: 22px;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            font-size: 18px;
+            outline: none;
+        }
+        .login-box input:focus {
+            border-color: #1e3a8a;
+        }
+        .password-wrapper {
+            position: relative;
+            margin-bottom: 22px;
+        }
+        .password-wrapper input {
+            width: 100%;
+            padding: 18px 22px;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            font-size: 18px;
+            outline: none;
+            padding-right: 60px;
+            margin-bottom: 0;
+        }
+        .password-wrapper input:focus {
+            border-color: #1e3a8a;
+        }
+        .eye-icon {
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #666;
+            font-size: 22px;
+        }
+        .login-box button {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 18px;
+            width: 100%;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 12px;
+        }
+        .login-box .close-btn {
+            background: transparent;
+            color: #666;
+            border: 2px solid #ddd;
+        }
+
+        /* Owner Panel */
+        .owner-panel {
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 3px solid #1e3a8a;
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+            display: none;
+        }
+        .owner-panel.show {
+            display: block;
+        }
+        .owner-panel h3 {
+            font-size: 28px;
+            margin-bottom: 24px;
+            color: #1e3a8a;
+        }
+        .owner-panel h4 {
+            font-size: 20px;
+            margin: 25px 0 15px;
+            color: #0f2b5c;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .owner-edit-field {
+            margin-bottom: 18px;
+        }
+        .owner-edit-field label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 16px;
+            color: #1e293b;
+        }
+        .owner-edit-field input, .owner-edit-field textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 40px;
+            font-size: 16px;
+            background: #ffffff;
+            color: #121826;
+        }
+        body.dark-mode .owner-panel {
+            background: #151e2f;
+            border-color: #7f9cf5;
+        }
+        body.dark-mode .owner-panel h3 {
+            color: #a5b9ff;
+        }
+        body.dark-mode .owner-panel h4 {
+            color: #d1d9e8;
+            border-bottom-color: #3a4a6a;
+        }
+        body.dark-mode .owner-edit-field label {
+            color: #f0f4fa;
+        }
+        body.dark-mode .owner-edit-field input,
+        body.dark-mode .owner-edit-field textarea {
+            background: #1a2538;
+            border-color: #3a4a6a;
+            color: #f0f4fa;
+        }
+        body.dark-mode .owner-edit-field input:focus,
+        body.dark-mode .owner-edit-field textarea:focus {
+            border-color: #7f9cf5;
+        }
+        
+        .owner-btn {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 12px;
+            margin-top: 10px;
+            transition: 0.2s;
+        }
+        .owner-btn:hover {
+            background: #0f2660;
+            transform: translateY(-2px);
+        }
+        .owner-btn.secondary {
+            background: transparent;
+            color: #1e3a8a;
+            border: 2px solid #1e3a8a;
+        }
+        .owner-btn.secondary:hover {
+            background: #eef3ff;
+        }
+        .owner-btn.danger {
+            background: #dc2626;
+            border-color: #dc2626;
+        }
+        .owner-btn.danger:hover {
+            background: #b91c1c;
+        }
+        .owner-btn.success {
+            background: #10b981;
+            border-color: #10b981;
+        }
+        .owner-btn.success:hover {
+            background: #059669;
+        }
+        body.dark-mode .owner-btn.secondary {
+            color: #a5b9ff;
+            border-color: #a5b9ff;
+        }
+        body.dark-mode .owner-btn.secondary:hover {
+            background: #2d3b5a;
+        }
+
+        /* Category management */
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .category-tag {
+            background: #eef3ff;
+            border-radius: 30px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid #1e3a8a;
+        }
+        .category-tag span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .category-tag button {
+            background: transparent;
+            border: none;
+            color: #dc2626;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        body.dark-mode .category-tag {
+            background: #1f2b3f;
+        }
+
+        /* Users and Orders Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .data-table th {
+            background: #1e3a8a;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        body.dark-mode .data-table td {
+            border-bottom-color: #3a4a6a;
+        }
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .status-active {
+            background: #10b981;
+            color: white;
+        }
+        .status-blocked {
+            background: #dc2626;
+            color: white;
+        }
+        .action-btn {
+            background: transparent;
+            border: none;
+            color: #1e3a8a;
+            cursor: pointer;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+        .action-btn:hover {
+            transform: scale(1.1);
+        }
+        .action-btn.delete:hover {
+            color: #dc2626;
+        }
+        body.dark-mode .action-btn {
+            color: #a5b9ff;
+        }
+
+        /* Section IDs */
+        #work-section, #projects-section {
+            scroll-margin-top: 80px;
+        }
+
+        /* All other styles preserved */
+        .hero { display: flex; flex-direction: column; align-items: center; gap: 40px; padding: 30px 0 50px; }
+        @media (min-width: 768px) { .hero { flex-direction: row; } }
+        .hero-content { flex: 1; animation: fadeUp 0.8s ease-out; width: 100%; }
+        .hero-content .badge { font-size: 15px; font-weight: 600; color: #1e3a8a; background: #e0e9ff; display: inline-block; padding: 5px 18px; border-radius: 40px; letter-spacing: 0.3px; margin-bottom: 16px; }
+        .hero-content h1 { font-size: 42px; font-weight: 700; line-height: 1.1; letter-spacing: -1px; color: #0b1c3a; margin-bottom: 8px; }
+        @media (min-width: 480px) { .hero-content h1 { font-size: 52px; } }
+        .hero-content h1 span { background: linear-gradient(145deg, #1e3a8a, #001b5c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-cast { font-size: 20px; font-weight: 500; color: #334155; margin-bottom: 8px; }
+        .hero-exp { font-size: 18px; font-weight: 600; color: #0e2b5c; background: #dde5ff; display: inline-block; padding: 4px 18px; border-radius: 40px; margin: 12px 0 16px; }
+        .hero-desc { font-size: 18px; color: #2d3c54; max-width: 580px; margin-bottom: 30px; }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn-primary { background: #1e3a8a; border: none; padding: 12px 32px; border-radius: 60px; font-weight: 600; font-size: 17px; color: white; cursor: pointer; transition: 0.2s; box-shadow: 0 4px 14px rgba(30, 58, 138, 0.4); border: 2px solid #1e3a8a; }
+        .btn-primary:hover { background: #0f2660; transform: translateY(-3px); }
+        .hero-avatar { flex: 1; display: flex; justify-content: center; width: 100%; }
+        .avatar-box { background: linear-gradient(135deg, #d6e2ff, #ffffff); border-radius: 40% 60% 50% 50% / 40% 50% 50% 60%; width: 280px; height: 280px; display: flex; align-items: center; justify-content: center; box-shadow: 0 30px 40px -15px rgba(20, 40, 90, 0.3); transition: transform 0.4s ease; }
+        @media (min-width: 480px) { .avatar-box { width: 340px; height: 340px; } }
+        .avatar-box i { font-size: 120px; color: #1e3a8a; opacity: 0.85; }
+        .section-header { text-align: center; margin: 50px 0 30px; }
+        .section-header h2 { font-size: 34px; font-weight: 700; color: #0b1c3a; letter-spacing: -0.5px; }
+        .section-header p { font-size: 18px; color: #3b4b66; margin-top: 6px; }
+        
+        #work-section .exp-card { background: white; border-radius: 32px; padding: 28px 24px; margin-bottom: 30px; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.02); border: 1px solid #e9efff; transition: 0.2s; }
+        .exp-header { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+        .exp-icon { background: #e2ebff; width: 56px; height: 56px; border-radius: 22px; display: flex; align-items: center; justify-content: center; }
+        .exp-icon i { font-size: 30px; color: #1e3a8a; }
+        .exp-title h3 { font-size: 26px; font-weight: 700; color: #0d1f44; }
+        .exp-title .sub { font-size: 18px; font-weight: 500; color: #3b4e7a; }
+        .exp-desc { font-size: 17px; color: #2a3448; margin-bottom: 16px; padding-left: 20px; border-left: 4px solid #a3b9f0; }
+        .exp-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px 16px; }
+        .exp-list li { font-size: 16px; color: #1f2c48; display: flex; align-items: center; gap: 8px; }
+        .exp-list li i { color: #1e3a8a; font-size: 15px; }
+        
+        #projects-section .grid-3 { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 640px) { #projects-section .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { #projects-section .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+        #projects-section .skills-category { background: white; border-radius: 32px; padding: 24px 22px; border: 1px solid #e2ecff; height: 100%; transition: 0.2s; }
+        #projects-section .skills-category:hover { transform: translateY(-6px); box-shadow: 0 30px 40px -12px rgba(30, 58, 138, 0.15); border-color: #a6bbf0; }
+        #projects-section .skills-category h3 { font-size: 24px; font-weight: 700; color: #11203e; margin-bottom: 18px; }
+        #projects-section .skills-category ul { list-style: none; }
+        #projects-section .skills-category li { font-size: 17px; margin-bottom: 12px; color: #263755; display: flex; align-items: center; gap: 8px; }
+        #projects-section .skills-category i { color: #1e3a8a; width: 22px; }
+
+        .profile-summary { background: #eaf1ff; border-radius: 40px; padding: 28px 24px; margin: 40px 0; font-size: 18px; color: #121f3f; border: 1px solid #b3c9ff; }
+        .contact-card { background: #ffffff; border-radius: 40px; padding: 40px 24px; margin: 40px 0 30px; border: 1px solid #dfeaff; text-align: center; }
+        .contact-card h2 { font-size: 36px; font-weight: 700; color: #0b1c3a; letter-spacing: -1px; margin-bottom: 24px; }
+        .contact-details { display: flex; flex-direction: column; align-items: center; gap: 16px; margin: 20px auto; }
+        @media (min-width: 480px) { .contact-details { flex-direction: row; flex-wrap: wrap; justify-content: center; } }
+        .contact-item { display: flex; align-items: center; gap: 12px; font-size: 18px; background: #f1f5ff; padding: 10px 24px; border-radius: 60px; color: #121e42; border: 2px solid transparent; transition: 0.2s; }
+        .contact-item i { font-size: 22px; color: #1e3a8a; }
+        .contact-location { font-size: 20px; color: #1f2f55; background: #e4ecff; padding: 8px 24px; border-radius: 60px; display: inline-block; margin: 8px 0; }
+        .footer-bottom { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 30px 0 40px; font-size: 16px; color: #3d4d74; border-top: 2px solid #dde6ff; margin-top: 20px; text-align: center; }
+        @media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
+        .social-links { display: flex; gap: 24px; }
+        .social-links a { color: #1e3a8a; font-size: 22px; transition: 0.2s; }
+        .education-badge { background: #e8f0fe; border-radius: 60px; padding: 14px 28px; margin: 20px 0; display: inline-block; font-size: 18px; }
+        @keyframes fadeUp { 0% { opacity: 0; transform: translateY(15px); } 100% { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo" id="logo-text" onclick="scrollToTop()">
+                <i class="fas fa-crown"></i> M.Sarib Randhawa
+            </div>
+            
+            <div class="nav-links">
+                <a onclick="scrollToWork()">Work</a>
+                <a onclick="scrollToProjects()">Projects</a>
+                <a href="#contact">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-right">
+                <!-- Dynamic Auth Section -->
+                <div id="authSection"></div>
+
+                <!-- WhatsApp Button (dynamically updated) -->
+                <a id="whatsappBtn" href="#" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                
+                <!-- Email Button (dynamically updated) -->
+                <a id="emailBtn" href="#" class="email-btn" title="Send Email">
+                    <i class="far fa-envelope"></i>
+                </a>
+                
+                <!-- Hire Me Button -->
+                <button class="btn-hire" id="hireMeBtn"><i class="fas fa-briefcase"></i> Hire Me</button>
+                
+                <!-- Three-dot menu -->
+                <div class="menu-dots">
+                    <button class="dots-button" id="dotsMenuBtn"><i class="fas fa-ellipsis-v"></i></button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <!-- Administrator Login (Owner Panel) -->
+                        <div class="menu-item" id="adminLoginItem">
+                            <i class="fas fa-user-shield"></i> <span>Owner Panel Login</span>
+                        </div>
+                        
+                        <!-- SINGLE THEME TOGGLE BUTTON -->
+                        <div class="theme-toggle-btn" id="themeToggleSingle">
+                            <i class="fas fa-moon" id="themeIcon"></i> <span id="themeText">Dark Mode</span>
+                        </div>
+
+                        <!-- Language -->
+                        <div class="menu-item" id="langToggleItem">
+                            <i class="fas fa-language"></i> <span>Language</span>
+                        </div>
+                        <div class="sub-options hidden" id="langSub">
+                            <span id="langEn"><i class="fas fa-flag-usa"></i> English</span>
+                            <span id="langUr"><i class="fas fa-flag"></i> Urdu</span>
+                            <span id="langEs"><i class="fas fa-flag-spain"></i> Spanish</span>
+                        </div>
+
+                        <!-- Help -->
+                        <div class="menu-item" id="helpItem">
+                            <i class="fas fa-headset"></i> <span>Help (Customer Support)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signupModal">
+            <div class="modal-content">
+                <h3><i class="fas fa-user-plus"></i> Sign Up</h3>
+                <div class="password-wrapper">
+                    <input type="text" id="signupName" placeholder="Full Name *" required>
+                </div>
+                <div class="password-wrapper">
+                    <input type="text" id="signupUsername" placeholder="Username *" required>
+                </div>
+                <div class="password-wrapper">
+                    <input type="password" id="signupPassword" placeholder="Password *" required>
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('signupPassword', this)"></i>
+                </div>
+                <div class="password-wrapper">
+                    <input type="email" id="signupEmail" placeholder="Email *" required>
+                </div>
+                <div class="password-wrapper">
+                    <input type="text" id="signupPhone" placeholder="WhatsApp Number *" required>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="signupRemember">
+                    <label for="signupRemember">Remember me</label>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button id="submitSignupBtn">Create Account</button>
+                    <button class="close-modal-btn" id="closeSignupModal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal" id="loginModal">
+            <div class="modal-content">
+                <h3><i class="fas fa-sign-in-alt"></i> Log In</h3>
+                <p>Enter username, email, name or phone number</p>
+                <div class="password-wrapper">
+                    <input type="text" id="loginIdentifier" placeholder="Username/Email/Name/Phone" required>
+                </div>
+                <div class="password-wrapper">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('loginPassword', this)"></i>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="loginRemember">
+                    <label for="loginRemember">Remember me</label>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button id="submitLoginBtn">Log In</button>
+                    <button class="close-modal-btn" id="closeLoginModal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forgot Password Modal (Step 1: WhatsApp) -->
+        <div class="modal" id="forgotWhatsAppModal">
+            <div class="modal-content">
+                <h3><i class="fas fa-key"></i> Forgot Password</h3>
+                <p>Enter your WhatsApp number to receive a 6-digit verification code.</p>
+                <div class="password-wrapper">
+                    <input type="text" id="forgotWhatsApp" placeholder="WhatsApp Number *" required>
+                </div>
+                <div class="small-note">We'll send a unique 6-digit code to this number via WhatsApp.</div>
+                <div style="display: flex; gap: 10px;">
+                    <button id="sendCodeBtn">Send Code</button>
+                    <button class="close-modal-btn" id="closeForgotWhatsAppModal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forgot Password Modal (Step 2: Verify Code) -->
+        <div class="modal" id="forgotVerifyModal">
+            <div class="modal-content">
+                <h3><i class="fas fa-shield-alt"></i> Verify Code</h3>
+                <p>Enter the 6-digit code sent to your WhatsApp.</p>
+                <div class="password-wrapper">
+                    <input type="text" id="verificationCode" placeholder="6-digit code" maxlength="6" required>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button id="verifyCodeBtn">Verify</button>
+                    <button class="close-modal-btn" id="closeVerifyModal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forgot Password Modal (Step 3: New Password) -->
+        <div class="modal" id="forgotNewPasswordModal">
+            <div class="modal-content">
+                <h3><i class="fas fa-lock"></i> Reset Password</h3>
+                <p>Enter your new password.</p>
+                <div class="password-wrapper">
+                    <input type="password" id="newPassword" placeholder="New Password *" required>
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('newPassword', this)"></i>
+                </div>
+                <div class="password-wrapper">
+                    <input type="password" id="confirmPassword" placeholder="Confirm New Password *" required>
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('confirmPassword', this)"></i>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button id="resetPasswordBtn">Reset Password</button>
+                    <button class="close-modal-btn" id="closeNewPasswordModal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Place Order Modal with Categories -->
+        <div class="modal" id="placeOrderModal">
+            <div class="modal-content">
+                <h3><i class="fas fa-shopping-cart"></i> Place Your Order</h3>
+                <p>Select the type of service you need:</p>
+                
+                <div class="category-grid" id="categoryGrid">
+                    <!-- Categories will be dynamically loaded -->
+                </div>
+
+                <div class="order-id-box" id="orderIdDisplay">
+                    <i class="fas fa-hashtag"></i>
+                    <span id="orderIdValue">ORD-......</span>
+                </div>
+
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <button id="submitOrderBtn" disabled><i class="fas fa-paper-plane"></i> Submit Order</button>
+                    <button class="close-modal-btn" id="closePlaceOrderModal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hire Me Modal -->
+        <div class="modal" id="hireModal">
+            <div class="modal-content">
+                <h3><i class="fas fa-briefcase"></i> Hire Me Details</h3>
+                <p>Please fill in your information to proceed with hiring.</p>
+                <div class="password-wrapper">
+                    <input type="text" id="hireName" placeholder="Full Name *" required>
+                </div>
+                <div class="password-wrapper">
+                    <input type="email" id="hireEmail" placeholder="Email Address *" required>
+                </div>
+                <div class="password-wrapper">
+                    <input type="text" id="hirePhone" placeholder="Contact Number *" required>
+                </div>
+                <div class="password-wrapper">
+                    <input type="text" id="hireRef" placeholder="Reference Code (Optional)">
+                </div>
+                <div class="file-input">
+                    <i class="fas fa-upload"></i> Upload Resume/CV
+                    <input type="file" id="hireCV" accept=".pdf,.doc,.docx" style="display: none;">
+                    <button onclick="document.getElementById('hireCV').click()" style="background: #1e3a8a; color: white; padding: 8px 15px; border-radius: 40px; border: none; margin-left: 10px; cursor: pointer;">Choose File</button>
+                    <span id="fileName">No file chosen</span>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="termsCheckbox">
+                    <label for="termsCheckbox">I agree to all terms and services</label>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button id="submitHireBtn">Submit Request</button>
+                    <button class="close-modal-btn" id="closeHireModal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Users Info Modal -->
+        <div class="modal" id="usersInfoModal">
+            <div class="modal-content">
+                <h3><i class="fas fa-users"></i> Registered Users</h3>
+                <table class="data-table" id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <!-- Users will be inserted here -->
+                    </tbody>
+                </table>
+                <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+                    <button class="close-modal-btn" onclick="document.getElementById('usersInfoModal').classList.remove('show')">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders Info Modal -->
+        <div class="modal" id="ordersInfoModal">
+            <div class="modal-content">
+                <h3><i class="fas fa-shopping-cart"></i> Orders Placed</h3>
+                <table class="data-table" id="ordersTable">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersTableBody">
+                        <!-- Orders will be inserted here -->
+                    </tbody>
+                </table>
+                <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+                    <button class="close-modal-btn" onclick="document.getElementById('ordersInfoModal').classList.remove('show')">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Login Modal (Owner Panel) -->
+        <div class="admin-login-modal" id="adminLoginModal">
+            <div class="login-box">
+                <h3><i class="fas fa-lock"></i> Owner Panel Login</h3>
+                <div class="password-wrapper">
+                    <input type="text" id="adminUsername" placeholder="Enter username" autocomplete="off">
+                </div>
+                <div class="password-wrapper">
+                    <input type="password" id="adminPassword" placeholder="Enter password" autocomplete="off">
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('adminPassword', this)"></i>
+                </div>
+                <button id="loginAdminBtn">Access Owner Panel</button>
+                <button class="close-btn" id="closeAdminLoginModal">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Owner Panel -->
+        <div class="owner-panel" id="ownerPanel">
+            <h3><i class="fas fa-crown"></i> Owner Panel - Edit Profile Settings</h3>
+            
+            <h4>Profile Information</h4>
+            <div class="owner-edit-field">
+                <label>Full Name</label>
+                <input type="text" id="editName" value="M.Sarib Randhawa">
+            </div>
+            <div class="owner-edit-field">
+                <label>Cast / Title</label>
+                <input type="text" id="editCast" value="Jutt (Randhawa) · Creative Technologist">
+            </div>
+            <div class="owner-edit-field">
+                <label>Experience Badge</label>
+                <input type="text" id="editExp" value="8+ Years Of Experience">
+            </div>
+            <div class="owner-edit-field">
+                <label>Description</label>
+                <textarea id="editDesc">Logo & Brand Identity · 3D Modeling · Cinematic Video · AI Voice · Full‑Stack Web · Automation.</textarea>
+            </div>
+            <div class="owner-edit-field">
+                <label>Phone (WhatsApp)</label>
+                <input type="text" id="editPhone" value="0300 7847827">
+            </div>
+            <div class="owner-edit-field">
+                <label>Email</label>
+                <input type="email" id="editEmail" value="saribshareefbacha@gmail.com">
+            </div>
+            <div class="owner-edit-field">
+                <label>Location</label>
+                <input type="text" id="editLocation" value="Pakistan · Remote & Contract">
+            </div>
+
+            <h4>Order Categories</h4>
+            <div class="owner-edit-field">
+                <label>Add New Category</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="newCategory" placeholder="Enter category name">
+                    <button class="owner-btn success" id="addCategoryBtn" style="padding: 14px 20px; margin-top: 0;">Add</button>
+                </div>
+            </div>
+            <div id="categoriesList" class="category-list">
+                <!-- Categories will be displayed here -->
+            </div>
+
+            <h4>Owner Credentials</h4>
+            <div class="owner-edit-field">
+                <label>Owner Username</label>
+                <input type="text" id="editAdminUser" value="Sarib">
+            </div>
+            <div class="owner-edit-field">
+                <label>Owner Password</label>
+                <div class="password-wrapper" style="margin-bottom: 0;">
+                    <input type="password" id="editAdminPass" value="@Saribmadni786">
+                    <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility('editAdminPass', this)"></i>
+                </div>
+            </div>
+
+            <h4>Management</h4>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0;">
+                <button class="owner-btn success" id="viewUsersBtn"><i class="fas fa-users"></i> Users Info</button>
+                <button class="owner-btn success" id="viewOrdersBtn"><i class="fas fa-shopping-cart"></i> Orders Info</button>
+            </div>
+            
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
+                <button class="owner-btn" id="saveProfileBtn"><i class="fas fa-save"></i> Save Changes</button>
+                <button class="owner-btn secondary" id="seeChangesBtn"><i class="fas fa-eye"></i> See Made Changes</button>
+                <button class="owner-btn danger" id="ownerLogoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+
+        <!-- Website Content Wrapper -->
+        <div id="websiteContent">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="badge"><i class="fas fa-bolt"></i> Senior Digital Media & Tech Specialist</span>
+                    <h1><span id="displayName">M.Sarib Randhawa</span></h1>
+                    <div class="hero-cast" id="displayCast"><i class="fas fa-tag"></i> Jutt (Randhawa) · Creative Technologist</div>
+                    <div class="hero-exp" id="displayExp"><i class="far fa-calendar-alt"></i> 8+ Years Of Experience</div>
+                    <p class="hero-desc" id="displayDesc">Logo & Brand Identity · 3D Modeling · Cinematic Video · AI Voice · Full‑Stack Web · Automation.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" id="placeOrderHeroBtn"><i class="fas fa-shopping-cart"></i> Place Order</button>
+                    </div>
+                </div>
+                <div class="hero-avatar">
+                    <div class="avatar-box">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WORK SECTION -->
+            <section id="work-section">
+                <div class="section-header">
+                    <h2>Professional Journey</h2>
+                    <p>8 Years Of End‑To‑End Digital Project Execution</p>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="exp-title">
+                            <h3>Senior Digital Media & Technology Specialist</h3>
+                            <div class="sub">Freelance / Contract-Based | 2018 – Present</div>
+                        </div>
+                    </div>
+                    <div class="exp-desc">Full Lifecycle Delivery — From Creative Concept To Development, Deployment And Automation.</div>
+                    <ul class="exp-list">
+                        <li><i class="fas fa-check-circle"></i> Brand Identities & Logos For Startups</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive Websites & Applications</li>
+                        <li><i class="fas fa-check-circle"></i> Cinematic Video & Promotional Content</li>
+                        <li><i class="fas fa-check-circle"></i> AI Voiceovers & Custom Voice Solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Automation Systems For Content Workflow</li>
+                        <li><i class="fas fa-check-circle"></i> 3D Models For Visualization & Branding</li>
+                        <li><i class="fas fa-check-circle"></i> Client Communication & Requirement Analysis</li>
+                        <li><i class="fas fa-check-circle"></i> On‑Time Delivery, High Satisfaction</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- PROJECTS SECTION -->
+            <section id="projects-section">
+                <div class="section-header">
+                    <h2>Core Projects & Skills</h2>
+                    <p>Creative, Technical & Professional Expertise</p>
+                </div>
+                <div class="grid-3">
+                    <div class="skills-category">
+                        <h3><i class="fas fa-paint-brush"></i> Creative & Media</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Logo & Brand Identity Design</li>
+                            <li><i class="fas fa-check"></i> 3D Modeling (Intermediate/Advanced)</li>
+                            <li><i class="fas fa-check"></i> Video Editing (Cinematic)</li>
+                            <li><i class="fas fa-check"></i> Photo Editing & Retouching</li>
+                            <li><i class="fas fa-check"></i> AI Voice Generation & Audio</li>
+                            <li><i class="fas fa-check"></i> Social Media Content Creation</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h3><i class="fas fa-code"></i> Technical & Dev</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Full Stack Web Development</li>
+                            <li><i class="fas fa-check"></i> Application Development</li>
+                            <li><i class="fas fa-check"></i> UI/UX Implementation</li>
+                            <li><i class="fas fa-check"></i> Automation & AI Integration</li>
+                            <li><i class="fas fa-check"></i> API Integration</li>
+                            <li><i class="fas fa-check"></i> Deployment & Hosting</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h3><i class="fas fa-users"></i> Professional</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Project Management</li>
+                            <li><i class="fas fa-check"></i> Client Communication</li>
+                            <li><i class="fas fa-check"></i> Strategic Thinking</li>
+                            <li><i class="fas fa-check"></i> Problem Solving</li>
+                            <li><i class="fas fa-check"></i> Creative Direction</li>
+                            <li><i class="fas fa-check"></i> Time Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Summary -->
+            <div class="profile-summary" id="displaySummary">
+                <i class="fas fa-quote-left" style="color: #1e3a8a; opacity: 0.4; font-size: 28px;"></i>
+                <strong>Innovative And Results-Driven Digital Creative Technologist</strong> With Over 8 Years Of Professional Experience In Logo Design, 3D Modeling, Video Production, AI Voice Generation, Web Development, And Application Development. Skilled In Combining Creative Design Principles With Advanced Development Technologies To Deliver High-Impact Digital Solutions. <br><br>
+                Proven Ability To Manage Full Project Lifecycles — From Concept And Design To Development, Deployment, And Optimization. Passionate About Leveraging AI Tools And Automation To Create Scalable Digital Products And Engaging Multimedia Content.
+            </div>
+
+            <!-- Education -->
+            <div class="education-badge" id="displayEducation">
+                <i class="fas fa-graduation-cap"></i> Education: Intermediate (Current)
+            </div>
+
+            <!-- Contact & Availability -->
+            <div class="contact-card" id="contact">
+                <h2>📬 Contact & Availability</h2>
+                <div class="contact-details">
+                    <div class="contact-item" id="displayPhone"><i class="fas fa-phone-alt"></i> 0300 7847827</div>
+                    <div class="contact-item" id="displayEmail"><i class="fas fa-envelope"></i> saribshareefbacha@gmail.com</div>
+                </div>
+                <div class="contact-location" id="displayLocation">
+                    <i class="fas fa-map-marker-alt"></i> Pakistan · Remote & Contract
+                </div>
+                <p style="margin-top: 24px; font-size: 18px;"><i class="fas fa-globe"></i> Available For Remote & Contract Work</p>
+            </div>
+
+            <!-- Footer with all social media links -->
+            <div class="footer-bottom">
+                <div id="displayFooter">© 2025 M.Sarib Randhawa — 8 Years Crafting Digital</div>
+                <div class="social-links">
+                    <a href="https://github.com/saribshareefbacha-ctrl" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sarib-shareef-bacha-588297319" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com/@factshub_0001-s?si=l0jWJiR5oUEIo6WK" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@noctiskravenx_369?_r=1&_t=ZS-941nm4FnC69" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Global function for password visibility toggle
+        window.togglePasswordVisibility = function(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        };
+
+        (function() {
+            // DOM Elements
+            const dotsBtn = document.getElementById('dotsMenuBtn');
+            const dropdown = document.getElementById('dropdownMenu');
+            const body = document.body;
+            
+            // Auth section
+            const authSection = document.getElementById('authSection');
+            
+            // Auth modals
+            const signupModal = document.getElementById('signupModal');
+            const loginModal = document.getElementById('loginModal');
+            const forgotWhatsAppModal = document.getElementById('forgotWhatsAppModal');
+            const forgotVerifyModal = document.getElementById('forgotVerifyModal');
+            const forgotNewPasswordModal = document.getElementById('forgotNewPasswordModal');
+            const hireModal = document.getElementById('hireModal');
+            const placeOrderModal = document.getElementById('placeOrderModal');
+            const usersInfoModal = document.getElementById('usersInfoModal');
+            const ordersInfoModal = document.getElementById('ordersInfoModal');
+            
+            const hireMeBtn = document.getElementById('hireMeBtn');
+            const placeOrderHeroBtn = document.getElementById('placeOrderHeroBtn');
+            
+            const closeSignup = document.getElementById('closeSignupModal');
+            const closeLogin = document.getElementById('closeLoginModal');
+            const closeForgotWhatsApp = document.getElementById('closeForgotWhatsAppModal');
+            const closeVerify = document.getElementById('closeVerifyModal');
+            const closeNewPassword = document.getElementById('closeNewPasswordModal');
+            const closeHire = document.getElementById('closeHireModal');
+            const closePlaceOrder = document.getElementById('closePlaceOrderModal');
+            
+            const submitSignup = document.getElementById('submitSignupBtn');
+            const submitLogin = document.getElementById('submitLoginBtn');
+            const sendCodeBtn = document.getElementById('sendCodeBtn');
+            const verifyCodeBtn = document.getElementById('verifyCodeBtn');
+            const resetPasswordBtn = document.getElementById('resetPasswordBtn');
+            const submitHire = document.getElementById('submitHireBtn');
+            const submitOrderBtn = document.getElementById('submitOrderBtn');
+            
+            // Category management
+            const categoryGrid = document.getElementById('categoryGrid');
+            const categoriesList = document.getElementById('categoriesList');
+            const newCategoryInput = document.getElementById('newCategory');
+            const addCategoryBtn = document.getElementById('addCategoryBtn');
+            
+            // File input
+            const hireCV = document.getElementById('hireCV');
+            const fileNameSpan = document.getElementById('fileName');
+            
+            // Default categories
+            const defaultCategories = [
+                'Web Development', 'App Development', 'Video Editing', 'Photo Editing',
+                'Logo Designing', 'Thumbnail Designing', 'Canva Full Use', 'AI Voice Over', 'AI Photo Editing'
+            ];
+            
+            // Load categories from localStorage or use defaults
+            let categories = JSON.parse(localStorage.getItem('orderCategories')) || defaultCategories;
+            
+            // Users array with status
+            let users = JSON.parse(localStorage.getItem('portfolioUsers')) || [];
+            // Add status field to existing users if not present
+            users = users.map(user => ({
+                ...user,
+                status: user.status || 'active'
+            }));
+            
+            // Orders array
+            let orders = JSON.parse(localStorage.getItem('portfolioOrders')) || [];
+            
+            // Forgot password state
+            let resetUser = null;
+            let generatedCode = null;
+            let usedCodes = new Set();
+            
+            // Current logged in user
+            let currentUser = JSON.parse(localStorage.getItem('loggedInUser')) || null;
+            
+            // Owner login state
+            let isOwnerLoggedIn = localStorage.getItem('isOwnerLoggedIn') === 'true';
+            
+            // Admin login elements
+            const adminLoginItem = document.getElementById('adminLoginItem');
+            const adminModal = document.getElementById('adminLoginModal');
+            const closeAdminLogin = document.getElementById('closeAdminLoginModal');
+            const loginAdminBtn = document.getElementById('loginAdminBtn');
+            const ownerPanel = document.getElementById('ownerPanel');
+            const ownerLogoutBtn = document.getElementById('ownerLogoutBtn');
+            const viewUsersBtn = document.getElementById('viewUsersBtn');
+            const viewOrdersBtn = document.getElementById('viewOrdersBtn');
+            
+            // Editable fields
+            const displayName = document.getElementById('displayName');
+            const displayCast = document.getElementById('displayCast');
+            const displayExp = document.getElementById('displayExp');
+            const displayDesc = document.getElementById('displayDesc');
+            const displayPhone = document.getElementById('displayPhone');
+            const displayEmail = document.getElementById('displayEmail');
+            const displayLocation = document.getElementById('displayLocation');
+            const displayFooter = document.getElementById('displayFooter');
+            
+            // Edit inputs
+            const editName = document.getElementById('editName');
+            const editCast = document.getElementById('editCast');
+            const editExp = document.getElementById('editExp');
+            const editDesc = document.getElementById('editDesc');
+            const editPhone = document.getElementById('editPhone');
+            const editEmail = document.getElementById('editEmail');
+            const editLocation = document.getElementById('editLocation');
+            const editAdminUser = document.getElementById('editAdminUser');
+            const editAdminPass = document.getElementById('editAdminPass');
+            const saveBtn = document.getElementById('saveProfileBtn');
+            const seeChangesBtn = document.getElementById('seeChangesBtn');
+
+            // Theme toggle
+            const themeToggle = document.getElementById('themeToggleSingle');
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+
+            // Dynamic contact buttons
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            const emailBtn = document.getElementById('emailBtn');
+
+            // Store owner credentials
+            let ownerUsername = 'Sarib';
+            let ownerPassword = '@Saribmadni786';
+            let ownerPhone = '0300 7847827';
+            let ownerEmail = 'saribshareefbacha@gmail.com';
+            let ownerWhatsAppLink = `https://wa.me/923007847827?text=Hello%20M.Sarib%2C%20I%20visited%20your%20portfolio`;
+            let ownerEmailLink = `mailto:saribshareefbacha@gmail.com`;
+
+            // Function to update contact buttons based on owner's current contact info
+            function updateContactButtons() {
+                let phoneDigits = ownerPhone.replace(/\D/g, '');
+                if (phoneDigits.startsWith('0')) {
+                    phoneDigits = '92' + phoneDigits.substring(1);
+                }
+                ownerWhatsAppLink = `https://wa.me/${phoneDigits}?text=Hello%20M.Sarib%2C%20I%20visited%20your%20portfolio`;
+                whatsappBtn.href = ownerWhatsAppLink;
+                ownerEmailLink = `mailto:${ownerEmail}`;
+                emailBtn.href = ownerEmailLink;
+                console.log('Contact buttons updated:', ownerWhatsAppLink, ownerEmailLink); // Debug log
+            }
+
+            // Initialize contact buttons
+            updateContactButtons();
+
+            // Function to render categories in owner panel
+            function renderCategoriesList() {
+                if (!categoriesList) return;
+                categoriesList.innerHTML = '';
+                categories.forEach((category, index) => {
+                    const tag = document.createElement('div');
+                    tag.className = 'category-tag';
+                    tag.innerHTML = `
+                        <span>${category}</span>
+                        <button onclick="removeCategory(${index})"><i class="fas fa-times"></i></button>
+                    `;
+                    categoriesList.appendChild(tag);
+                });
+            }
+
+            // Function to render categories in order modal
+            function renderCategoryGrid() {
+                if (!categoryGrid) return;
+                categoryGrid.innerHTML = '';
+                categories.forEach(category => {
+                    const card = document.createElement('div');
+                    card.className = 'category-card';
+                    card.dataset.category = category;
+                    
+                    // Choose icon based on category name
+                    let icon = 'fas fa-cog';
+                    if (category.toLowerCase().includes('web')) icon = 'fas fa-code';
+                    else if (category.toLowerCase().includes('app')) icon = 'fas fa-mobile-alt';
+                    else if (category.toLowerCase().includes('video')) icon = 'fas fa-video';
+                    else if (category.toLowerCase().includes('photo')) icon = 'fas fa-image';
+                    else if (category.toLowerCase().includes('logo')) icon = 'fas fa-paint-brush';
+                    else if (category.toLowerCase().includes('thumb')) icon = 'fas fa-paint-brush';
+                    else if (category.toLowerCase().includes('canva')) icon = 'fas fa-paint-brush';
+                    else if (category.toLowerCase().includes('voice')) icon = 'fas fa-microphone-alt';
+                    else if (category.toLowerCase().includes('ai')) icon = 'fas fa-robot';
+                    
+                    card.innerHTML = `<i class="${icon}"></i><span>${category}</span>`;
+                    
+                    card.addEventListener('click', () => {
+                        document.querySelectorAll('.category-card').forEach(c => c.classList.remove('selected'));
+                        card.classList.add('selected');
+                        selectedCategory = category;
+                        orderIdSpan.textContent = generateOrderId();
+                        submitOrderBtn.disabled = false;
+                    });
+                    
+                    categoryGrid.appendChild(card);
+                });
+            }
+
+            // Global function to remove category
+            window.removeCategory = function(index) {
+                categories.splice(index, 1);
+                localStorage.setItem('orderCategories', JSON.stringify(categories));
+                renderCategoriesList();
+                renderCategoryGrid();
+            };
+
+            // Add category button
+            if (addCategoryBtn) {
+                addCategoryBtn.addEventListener('click', () => {
+                    const newCat = newCategoryInput.value.trim();
+                    if (newCat && !categories.includes(newCat)) {
+                        categories.push(newCat);
+                        localStorage.setItem('orderCategories', JSON.stringify(categories));
+                        renderCategoriesList();
+                        renderCategoryGrid();
+                        newCategoryInput.value = '';
+                    }
+                });
+            }
+
+            // Generate random order ID
+            function generateOrderId() {
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                let id = 'ORD-';
+                for (let i = 0; i < 6; i++) {
+                    id += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                return id;
+            }
+
+            // Category selection handler
+            let selectedCategory = null;
+            const orderIdSpan = document.getElementById('orderIdValue');
+
+            // Function to update auth section
+            function updateAuthSection() {
+                if (isOwnerLoggedIn) {
+                    authSection.innerHTML = `
+                        <div class="owner-welcome">
+                            <span><i class="fas fa-crown"></i> Owner</span>
+                            <button class="owner-logout-btn" id="ownerLogoutBtn" title="Logout"><i class="fas fa-sign-out-alt"></i></button>
+                        </div>
+                    `;
+                    document.getElementById('ownerLogoutBtn').addEventListener('click', () => {
+                        localStorage.removeItem('isOwnerLoggedIn');
+                        isOwnerLoggedIn = false;
+                        ownerPanel.classList.remove('show');
+                        body.classList.remove('owner-mode', 'viewing-changes');
+                        updateAuthSection();
+                        location.reload();
+                    });
+                } else if (currentUser) {
+                    // Check if user is blocked
+                    const userRecord = users.find(u => u.username === currentUser.username);
+                    if (userRecord && userRecord.status === 'blocked') {
+                        // User is blocked, log them out
+                        localStorage.removeItem('loggedInUser');
+                        currentUser = null;
+                        updateAuthSection();
+                        alert('Your account has been blocked. Please contact support.');
+                    } else {
+                        authSection.innerHTML = `
+                            <div class="user-welcome">
+                                <span><i class="fas fa-user"></i> ${currentUser.name}</span>
+                                <button class="logout-btn" id="logoutBtn" title="Logout"><i class="fas fa-sign-out-alt"></i></button>
+                            </div>
+                        `;
+                        document.getElementById('logoutBtn').addEventListener('click', () => {
+                            localStorage.removeItem('loggedInUser');
+                            currentUser = null;
+                            updateAuthSection();
+                        });
+                    }
+                } else {
+                    authSection.innerHTML = `
+                        <div class="auth-dropdown">
+                            <button class="btn-get-started" id="getStartedBtn"><i class="fas fa-rocket"></i> Get Started</button>
+                            <div class="auth-menu" id="authMenu">
+                                <div class="menu-item" id="signupBtn"><i class="fas fa-user-plus"></i> Sign Up</div>
+                                <div class="menu-item" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Log In</div>
+                                <div class="menu-item" id="forgotBtn"><i class="fas fa-key"></i> Forgot Password</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    const getStartedBtn = document.getElementById('getStartedBtn');
+                    const authMenu = document.getElementById('authMenu');
+                    const signupBtn = document.getElementById('signupBtn');
+                    const loginBtn = document.getElementById('loginBtn');
+                    const forgotBtn = document.getElementById('forgotBtn');
+
+                    getStartedBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        authMenu.classList.toggle('show');
+                    });
+
+                    document.addEventListener('click', (e) => {
+                        if (!authMenu?.contains(e.target) && !getStartedBtn?.contains(e.target)) {
+                            authMenu?.classList.remove('show');
+                        }
+                    });
+
+                    signupBtn.addEventListener('click', () => {
+                        authMenu.classList.remove('show');
+                        signupModal.classList.add('show');
+                    });
+
+                    loginBtn.addEventListener('click', () => {
+                        authMenu.classList.remove('show');
+                        loginModal.classList.add('show');
+                    });
+
+                    forgotBtn.addEventListener('click', () => {
+                        authMenu.classList.remove('show');
+                        forgotWhatsAppModal.classList.add('show');
+                    });
+                }
+            }
+
+            // Check owner login state on load
+            if (isOwnerLoggedIn) {
+                body.classList.add('owner-mode');
+                ownerPanel.classList.add('show');
+                renderCategoriesList();
+            }
+
+            // Initial render of categories
+            renderCategoryGrid();
+
+            updateAuthSection();
+
+            // Place Order button
+            placeOrderHeroBtn.addEventListener('click', () => {
+                if (currentUser) {
+                    // Check if user is blocked
+                    const userRecord = users.find(u => u.username === currentUser.username);
+                    if (userRecord && userRecord.status === 'blocked') {
+                        alert('Your account has been blocked. You cannot place orders.');
+                        return;
+                    }
+                    // Reset selection
+                    document.querySelectorAll('.category-card').forEach(c => c.classList.remove('selected'));
+                    selectedCategory = null;
+                    orderIdSpan.textContent = 'ORD-......';
+                    submitOrderBtn.disabled = true;
+                    placeOrderModal.classList.add('show');
+                } else {
+                    alert('Please login first to place an order.');
+                    loginModal.classList.add('show');
+                }
+            });
+
+            // Submit Order
+            submitOrderBtn.addEventListener('click', () => {
+                if (!selectedCategory) {
+                    alert('Please select a category.');
+                    return;
+                }
+
+                const orderId = orderIdSpan.textContent;
+                const now = new Date();
+                const dateStr = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+                
+                const orderData = {
+                    id: orderId,
+                    customer: currentUser.name,
+                    username: currentUser.username,
+                    email: currentUser.email,
+                    phone: currentUser.phone,
+                    category: selectedCategory,
+                    date: dateStr,
+                    status: 'Pending'
+                };
+                
+                orders.push(orderData);
+                localStorage.setItem('portfolioOrders', JSON.stringify(orders));
+
+                // Format message for WhatsApp with all required fields
+                const message = `🆕 *NEW ORDER PLACED*%0a%0a` +
+                    `*Date:* ${dateStr}%0a` +
+                    `*Name:* ${currentUser.name}%0a` +
+                    `*Username:* ${currentUser.username}%0a` +
+                    `*Contact:* ${currentUser.phone}%0a` +
+                    `*Order Type:* ${selectedCategory}%0a` +
+                    `*Order ID:* ${orderId}`;
+                
+                // Send to WhatsApp using current owner phone
+                let phoneDigits = ownerPhone.replace(/\D/g, '');
+                if (phoneDigits.startsWith('0')) {
+                    phoneDigits = '92' + phoneDigits.substring(1);
+                }
+                window.open(`https://wa.me/${phoneDigits}?text=${message}`, '_blank');
+                
+                // Send via email using current owner email
+                const emailBody = `NEW ORDER PLACED\n\nDate: ${dateStr}\nName: ${currentUser.name}\nUsername: ${currentUser.username}\nContact: ${currentUser.phone}\nOrder Type: ${selectedCategory}\nOrder ID: ${orderId}`;
+                window.location.href = `mailto:${ownerEmail}?subject=New Order ${orderId}&body=${encodeURIComponent(emailBody)}`;
+                
+                placeOrderModal.classList.remove('show');
+                alert(`Order placed successfully! Your Order ID is ${orderId}`);
+            });
+
+            // View Users
+            viewUsersBtn.addEventListener('click', () => {
+                const tbody = document.getElementById('usersTableBody');
+                tbody.innerHTML = '';
+                users.forEach((user, index) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${user.name}</td>
+                        <td>${user.username}</td>
+                        <td>${user.email}</td>
+                        <td>${user.phone}</td>
+                        <td><span class="status-badge ${user.status === 'active' ? 'status-active' : 'status-blocked'}">${user.status}</span></td>
+                        <td>
+                            <button class="action-btn" onclick="toggleUserStatus(${index})" title="${user.status === 'active' ? 'Block' : 'Unblock'}">
+                                <i class="fas ${user.status === 'active' ? 'fa-ban' : 'fa-check-circle'}"></i>
+                            </button>
+                            <button class="action-btn delete" onclick="deleteUser(${index})" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+                usersInfoModal.classList.add('show');
+            });
+
+            // View Orders
+            viewOrdersBtn.addEventListener('click', () => {
+                const tbody = document.getElementById('ordersTableBody');
+                tbody.innerHTML = '';
+                orders.slice().reverse().forEach(order => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><strong>${order.id}</strong></td>
+                        <td>${order.customer}</td>
+                        <td>${order.category}</td>
+                        <td>${order.date}</td>
+                        <td><span class="status-badge status-active">${order.status}</span></td>
+                    `;
+                    tbody.appendChild(row);
+                });
+                ordersInfoModal.classList.add('show');
+            });
+
+            // Toggle dropdown
+            dotsBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('show');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target) && !dotsBtn.contains(e.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+
+            // Scroll functions
+            window.scrollToWork = function() {
+                document.getElementById('work-section').scrollIntoView({ behavior: 'smooth' });
+                dropdown.classList.remove('show');
+            };
+
+            window.scrollToProjects = function() {
+                document.getElementById('projects-section').scrollIntoView({ behavior: 'smooth' });
+                dropdown.classList.remove('show');
+            };
+
+            window.scrollToTop = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            // File input handler
+            hireCV.addEventListener('change', function() {
+                fileNameSpan.textContent = this.files[0] ? this.files[0].name : 'No file chosen';
+            });
+
+            // Close modals
+            closeSignup.addEventListener('click', () => signupModal.classList.remove('show'));
+            closeLogin.addEventListener('click', () => loginModal.classList.remove('show'));
+            closeForgotWhatsApp.addEventListener('click', () => forgotWhatsAppModal.classList.remove('show'));
+            closeVerify.addEventListener('click', () => forgotVerifyModal.classList.remove('show'));
+            closeNewPassword.addEventListener('click', () => forgotNewPasswordModal.classList.remove('show'));
+            closeHire.addEventListener('click', () => hireModal.classList.remove('show'));
+            closePlaceOrder.addEventListener('click', () => placeOrderModal.classList.remove('show'));
+
+            // Hire Me button
+            hireMeBtn.addEventListener('click', () => {
+                if (currentUser) {
+                    hireModal.classList.add('show');
+                } else {
+                    alert('Please login first to proceed with hiring.');
+                    loginModal.classList.add('show');
+                }
+            });
+
+            // Submit Sign Up
+            submitSignup.addEventListener('click', () => {
+                const name = document.getElementById('signupName').value;
+                const username = document.getElementById('signupUsername').value;
+                const password = document.getElementById('signupPassword').value;
+                const email = document.getElementById('signupEmail').value;
+                const phone = document.getElementById('signupPhone').value;
+                const remember = document.getElementById('signupRemember').checked;
+
+                if (!name || !username || !password || !email || !phone) {
+                    alert('Please fill all required fields.');
+                    return;
+                }
+
+                if (users.find(u => u.username === username || u.email === email)) {
+                    alert('User already exists with this username or email.');
+                    return;
+                }
+
+                const newUser = { name, username, password, email, phone, status: 'active' };
+                users.push(newUser);
+                localStorage.setItem('portfolioUsers', JSON.stringify(users));
+                
+                if (remember) {
+                    localStorage.setItem('loggedInUser', JSON.stringify(newUser));
+                    currentUser = newUser;
+                    updateAuthSection();
+                }
+
+                alert('Account created successfully!');
+                signupModal.classList.remove('show');
+                
+                document.getElementById('signupName').value = '';
+                document.getElementById('signupUsername').value = '';
+                document.getElementById('signupPassword').value = '';
+                document.getElementById('signupEmail').value = '';
+                document.getElementById('signupPhone').value = '';
+                document.getElementById('signupRemember').checked = false;
+            });
+
+            // Submit Login
+            submitLogin.addEventListener('click', () => {
+                const identifier = document.getElementById('loginIdentifier').value;
+                const password = document.getElementById('loginPassword').value;
+                const remember = document.getElementById('loginRemember').checked;
+
+                if (!identifier || !password) {
+                    alert('Please fill all fields.');
+                    return;
+                }
+
+                const user = users.find(u => 
+                    u.username === identifier || 
+                    u.email === identifier || 
+                    u.name === identifier || 
+                    u.phone === identifier
+                );
+
+                if (!user || user.password !== password) {
+                    alert('Invalid credentials.');
+                    return;
+                }
+
+                if (user.status === 'blocked') {
+                    alert('Your account has been blocked. Please contact support.');
+                    return;
+                }
+
+                if (remember) {
+                    localStorage.setItem('loggedInUser', JSON.stringify(user));
+                    currentUser = user;
+                    updateAuthSection();
+                }
+
+                alert(`Welcome back, ${user.name}!`);
+                loginModal.classList.remove('show');
+                
+                document.getElementById('loginIdentifier').value = '';
+                document.getElementById('loginPassword').value = '';
+                document.getElementById('loginRemember').checked = false;
+            });
+
+            // Send verification code via WhatsApp
+            sendCodeBtn.addEventListener('click', () => {
+                const whatsapp = document.getElementById('forgotWhatsApp').value;
+                if (!whatsapp) {
+                    alert('Please enter your WhatsApp number.');
+                    return;
+                }
+
+                resetUser = users.find(u => u.phone === whatsapp);
+                if (!resetUser) {
+                    alert('No account found with this WhatsApp number.');
+                    return;
+                }
+
+                do {
+                    generatedCode = Math.floor(100000 + Math.random() * 900000).toString();
+                } while (usedCodes.has(generatedCode));
+                
+                usedCodes.add(generatedCode);
+
+                let phoneDigits = whatsapp.replace(/\D/g, '');
+                if (phoneDigits.startsWith('0')) {
+                    phoneDigits = '92' + phoneDigits.substring(1);
+                }
+
+                const message = `Your%20verification%20code%20is%3A%20${generatedCode}`;
+                const whatsappLink = `https://wa.me/${phoneDigits}?text=${message}`;
+
+                window.open(whatsappLink, '_blank');
+                
+                alert(`Demo: Your verification code is ${generatedCode} (sent via WhatsApp to ${whatsapp})`);
+                
+                forgotWhatsAppModal.classList.remove('show');
+                forgotVerifyModal.classList.add('show');
+            });
+
+            // Verify code
+            verifyCodeBtn.addEventListener('click', () => {
+                const code = document.getElementById('verificationCode').value;
+                if (!code || code.length !== 6) {
+                    alert('Please enter a valid 6-digit code.');
+                    return;
+                }
+
+                if (code !== generatedCode) {
+                    alert('Invalid verification code.');
+                    return;
+                }
+
+                usedCodes.delete(generatedCode);
+                
+                forgotVerifyModal.classList.remove('show');
+                forgotNewPasswordModal.classList.add('show');
+            });
+
+            // Reset password
+            resetPasswordBtn.addEventListener('click', () => {
+                const newPass = document.getElementById('newPassword').value;
+                const confirmPass = document.getElementById('confirmPassword').value;
+
+                if (!newPass || !confirmPass) {
+                    alert('Please fill all fields.');
+                    return;
+                }
+
+                if (newPass !== confirmPass) {
+                    alert('Passwords do not match.');
+                    return;
+                }
+
+                if (resetUser) {
+                    resetUser.password = newPass;
+                    localStorage.setItem('portfolioUsers', JSON.stringify(users));
+                    alert('Password reset successfully! You can now login with your new password.');
+                }
+
+                forgotNewPasswordModal.classList.remove('show');
+                
+                document.getElementById('newPassword').value = '';
+                document.getElementById('confirmPassword').value = '';
+                document.getElementById('forgotWhatsApp').value = '';
+                document.getElementById('verificationCode').value = '';
+                resetUser = null;
+                generatedCode = null;
+            });
+
+            // Submit Hire Request
+            submitHire.addEventListener('click', () => {
+                if (!document.getElementById('termsCheckbox').checked) {
+                    alert('Please accept the terms and conditions to proceed.');
+                    return;
+                }
+                
+                const name = document.getElementById('hireName').value;
+                const email = document.getElementById('hireEmail').value;
+                const phone = document.getElementById('hirePhone').value;
+                const ref = document.getElementById('hireRef').value;
+                const cvFile = hireCV.files[0];
+                
+                if (!name || !email || !phone) {
+                    alert('Please fill all required fields.');
+                    return;
+                }
+                
+                let phoneDigits = ownerPhone.replace(/\D/g, '');
+                if (phoneDigits.startsWith('0')) {
+                    phoneDigits = '92' + phoneDigits.substring(1);
+                }
+                
+                let message = `🆕 *New Hiring Request*%0a%0a`;
+                message += `*Name:* ${name}%0a`;
+                message += `*Email:* ${email}%0a`;
+                message += `*Phone:* ${phone}%0a`;
+                message += `*Reference:* ${ref || 'Not provided'}%0a`;
+                message += `*CV:* ${cvFile ? cvFile.name : 'Not uploaded'}%0a`;
+                message += `*Terms:* Accepted`;
+                
+                window.open(`https://wa.me/${phoneDigits}?text=${message}`, '_blank');
+                window.location.href = `mailto:${ownerEmail}?subject=New Hiring Request from ${name}&body=Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ARef: ${ref || 'N/A'}%0ACV: ${cvFile ? cvFile.name : 'Not attached'}`;
+                
+                hireModal.classList.remove('show');
+                alert('Request submitted! Check WhatsApp and email for confirmation.');
+                
+                document.getElementById('hireName').value = '';
+                document.getElementById('hireEmail').value = '';
+                document.getElementById('hirePhone').value = '';
+                document.getElementById('hireRef').value = '';
+                hireCV.value = '';
+                fileNameSpan.textContent = 'No file chosen';
+                document.getElementById('termsCheckbox').checked = false;
+            });
+
+            // Theme toggle
+            function setTheme(isDark) {
+                if (isDark) {
+                    body.classList.add('dark-mode');
+                    themeIcon.className = 'fas fa-sun';
+                    themeText.innerText = 'Light Mode';
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    body.classList.remove('dark-mode');
+                    themeIcon.className = 'fas fa-moon';
+                    themeText.innerText = 'Dark Mode';
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            const savedTheme = localStorage.getItem('theme');
+            setTheme(savedTheme === 'dark');
+
+            themeToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                setTheme(!body.classList.contains('dark-mode'));
+                dropdown.classList.remove('show');
+            });
+
+            // Admin login
+            adminLoginItem.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (!isOwnerLoggedIn) {
+                    dropdown.classList.remove('show');
+                    adminModal.classList.add('show');
+                } else {
+                    alert('You are already logged in as owner.');
+                }
+            });
+
+            closeAdminLogin.addEventListener('click', () => {
+                adminModal.classList.remove('show');
+            });
+
+            loginAdminBtn.addEventListener('click', () => {
+                const username = document.getElementById('adminUsername').value;
+                const password = document.getElementById('adminPassword').value;
+                
+                if (username === ownerUsername && password === ownerPassword) {
+                    adminModal.classList.remove('show');
+                    isOwnerLoggedIn = true;
+                    localStorage.setItem('isOwnerLoggedIn', 'true');
+                    
+                    editName.value = displayName.innerText;
+                    editCast.value = displayCast.innerText.replace('Jutt (Randhawa) · ', '');
+                    editExp.value = displayExp.innerText.replace('8+ Years Of Experience', '8+ Years Of Experience').trim();
+                    editDesc.value = displayDesc.innerText;
+                    editPhone.value = displayPhone.innerText;
+                    editEmail.value = displayEmail.innerText;
+                    editLocation.value = displayLocation.innerText;
+                    editAdminUser.value = ownerUsername;
+                    editAdminPass.value = ownerPassword;
+                    
+                    ownerPanel.classList.add('show');
+                    body.classList.add('owner-mode');
+                    body.classList.remove('viewing-changes');
+                    renderCategoriesList();
+                    updateAuthSection();
+                } else {
+                    alert('Invalid credentials. Access denied.');
+                }
+            });
+
+            // Owner logout
+            ownerLogoutBtn.addEventListener('click', () => {
+                localStorage.removeItem('isOwnerLoggedIn');
+                isOwnerLoggedIn = false;
+                ownerPanel.classList.remove('show');
+                body.classList.remove('owner-mode', 'viewing-changes');
+                updateAuthSection();
+                location.reload();
+            });
+
+            // Save changes from owner panel - updates contact buttons immediately
+            saveBtn.addEventListener('click', () => {
+                displayName.innerText = editName.value;
+                displayCast.innerHTML = `<i class="fas fa-tag"></i> Jutt (Randhawa) · ${editCast.value}`;
+                displayExp.innerHTML = `<i class="far fa-calendar-alt"></i> ${editExp.value}`;
+                displayDesc.innerText = editDesc.value;
+                displayPhone.innerHTML = `<i class="fas fa-phone-alt"></i> ${editPhone.value}`;
+                displayEmail.innerHTML = `<i class="fas fa-envelope"></i> ${editEmail.value}`;
+                displayLocation.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${editLocation.value}`;
+                displayFooter.innerText = `© 2025 ${editName.value} — 8 Years Crafting Digital`;
+                
+                ownerUsername = editAdminUser.value;
+                ownerPassword = editAdminPass.value;
+                ownerPhone = editPhone.value;
+                ownerEmail = editEmail.value;
+                
+                // Update contact buttons immediately with new values
+                updateContactButtons();
+                
+                alert('Profile and credentials updated successfully! Contact buttons updated.');
+            });
+
+            // See Made Changes button
+            seeChangesBtn.addEventListener('click', () => {
+                body.classList.add('viewing-changes');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // User management functions
+            window.toggleUserStatus = function(index) {
+                users[index].status = users[index].status === 'active' ? 'blocked' : 'active';
+                localStorage.setItem('portfolioUsers', JSON.stringify(users));
+                
+                // If current user is blocked, log them out
+                if (currentUser && currentUser.username === users[index].username && users[index].status === 'blocked') {
+                    localStorage.removeItem('loggedInUser');
+                    currentUser = null;
+                    updateAuthSection();
+                }
+                
+                viewUsersBtn.click(); // Refresh the modal
+            };
+
+            window.deleteUser = function(index) {
+                if (confirm('Are you sure you want to delete this user?')) {
+                    users.splice(index, 1);
+                    localStorage.setItem('portfolioUsers', JSON.stringify(users));
+                    
+                    // If current user is deleted, log them out
+                    if (currentUser && !users.find(u => u.username === currentUser.username)) {
+                        localStorage.removeItem('loggedInUser');
+                        currentUser = null;
+                        updateAuthSection();
+                    }
+                    
+                    viewUsersBtn.click(); // Refresh the modal
+                }
+            };
+
+            // Language submenu
+            const langItem = document.getElementById('langToggleItem');
+            const langSub = document.getElementById('langSub');
+
+            langItem.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langSub.classList.toggle('hidden');
+            });
+
+            document.getElementById('helpItem').addEventListener('click', (e) => {
+                e.stopPropagation();
+                alert('🛎️ Customer Support: Email ' + ownerEmail + ' or call ' + ownerPhone);
+                dropdown.classList.remove('show');
+            });
+
+            document.getElementById('langEn').addEventListener('click', (e) => {
+                e.stopPropagation();
+                alert('🌍 Language set to English (simulated)');
+                langSub.classList.add('hidden');
+            });
+            document.getElementById('langUr').addEventListener('click', (e) => {
+                e.stopPropagation();
+                alert('🇵🇰 زبان اردو میں تبدیل (simulated)');
+                langSub.classList.add('hidden');
+            });
+            document.getElementById('langEs').addEventListener('click', (e) => {
+                e.stopPropagation();
+                alert('🇪🇸 Idioma cambiado a español (simulado)');
+                langSub.classList.add('hidden');
+            });
+
+            // Close modals when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === signupModal) signupModal.classList.remove('show');
+                if (e.target === loginModal) loginModal.classList.remove('show');
+                if (e.target === forgotWhatsAppModal) forgotWhatsAppModal.classList.remove('show');
+                if (e.target === forgotVerifyModal) forgotVerifyModal.classList.remove('show');
+                if (e.target === forgotNewPasswordModal) forgotNewPasswordModal.classList.remove('show');
+                if (e.target === hireModal) hireModal.classList.remove('show');
+                if (e.target === placeOrderModal) placeOrderModal.classList.remove('show');
+                if (e.target === usersInfoModal) usersInfoModal.classList.remove('show');
+                if (e.target === ordersInfoModal) ordersInfoModal.classList.remove('show');
+                if (e.target === adminModal) adminModal.classList.remove('show');
+            });
+
+        })();
+    </script>
+</body>
+</html>
